@@ -5,7 +5,7 @@ import { useLocalStorage } from './lib/useLocalStorage';
 
 // Database authors -> Mock Sellers/Artisans
 const Sellers = [
-  'Unassigned Artisan', 
+  '', 
   'Klain Washington', 
   'David Smith',
   'Keroen Johnson',
@@ -160,7 +160,7 @@ export default function Home() {
         </li>
       ))}
       {list.length === 0 && (
-        <li>{isFeaturedList ? 'No items in the Curated Collection yet.' : 'No active listings available. List one above!'}</li>
+        <li>{isFeaturedList ? ' Sales with value, product and employee.' : 'No active  Sales with value, product and employee. List one above!'}</li>
       )}
     </ul>
   );
@@ -199,7 +199,7 @@ export default function Home() {
         </div>
 
         <button id="add-btn" type="submit" style={{ width: '100%', padding: '10px', background: '#0056b3', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
-          List Item on Haven
+          Submit Products Sold by Seller and Price
         </button>
       </form>
       
@@ -224,7 +224,7 @@ export default function Home() {
       <hr style={{margin: '30px 0', border: '0', borderTop: '1px dashed #ccc'}}/>
 
       {/* --- All Listings Section --- */}
-      <h2 style={{marginBottom: '15px', color: '#171717'}}>📦 All Listings ({otherListings.length})</h2>
+      <h2 style={{marginBottom: '15px', color: '#171717'}}>📦 Products Sold ({otherListings.length})</h2>
       <ListingList list={otherListings} isFeaturedList={false} />
       
     </div>
